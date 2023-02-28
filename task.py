@@ -33,4 +33,12 @@ class AddTask(Task):
         return result
 
 
+class EmailTask(Task):
+    """邮件任务"""
+    name = "EmailTask"
 
+    def run(self, *args, **kwargs):
+        print('模拟发送邮件')
+        time.sleep(2)
+        print('邮件发送成功')
+        return 'ok'
