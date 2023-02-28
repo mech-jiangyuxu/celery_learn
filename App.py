@@ -6,13 +6,14 @@
 """
 
 from celery import Celery
-from task import AddTask
+from task import AddTask, EmailTask
 
 app = Celery()
 
 app.config_from_object('celeryconfig')  # 只要在当前目录中有celeryconfig.py模块就可以加载
 
 app.register_task(AddTask())
+app.register_task(EmailTask())
 
 if __name__ == '__main__':
     app.start()
