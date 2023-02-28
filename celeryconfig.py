@@ -15,4 +15,4 @@ enable_utc = True
 timezone = 'Asia/Shanghai'
 
 
-worker_concurrency = 2  # worker个数, 默认等于CPU个数
+worker_concurrency = 1  # worker个数, 默认等于CPU个数
